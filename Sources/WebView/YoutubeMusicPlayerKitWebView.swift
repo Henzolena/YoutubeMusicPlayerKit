@@ -43,7 +43,7 @@ final class YoutubeMusicPlayerKitWebView: WKWebView {
                 // Set allows picture in picture media playback
                 configuration.allowsPictureInPictureMediaPlayback = player.configuration.allowsPictureInPictureMediaPlayback
                 // Set allows background media playback
-                if #available(iOS 15.0, *) {
+                if #available(iOS 15.0, visionOS 1.0, *) {
                     configuration.allowsBackgroundMediaPlayback = player.configuration.allowsBackgroundPlayback
                 }
                 #endif
