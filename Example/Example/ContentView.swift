@@ -49,9 +49,6 @@ struct ContentView {
         self._wwdcKeynote = .init(initialValue: wwdcKeynote)
     }
 
-    func handlePlay() {
-        videoLauncher.showVideoPlayer()
-    }
 }
 
 // MARK: - View
@@ -446,7 +443,9 @@ private extension ContentView {
     var mediaControlSection: some View {
         Section("Media Control") {
             Button("Play", systemImage: "play") {
-                handlePlay()
+                Task {
+                    try? await self.youTubePlayer.play()
+                }
             }
             Button("Pause", systemImage: "pause") {
                 Task {
