@@ -42,17 +42,33 @@ final class YoutubeMusicPlayerKitWebView: WKWebView {
                 configuration.allowsInlineMediaPlayback = player.configuration.allowsInlineMediaPlayback
                 // Set allows picture in picture media playback
                 configuration.allowsPictureInPictureMediaPlayback = player.configuration.allowsPictureInPictureMediaPlayback
-                // Set allows background media playback
-                if #available(iOS 15.0, visionOS 1.0, *) {
-                    configuration.allowsBackgroundMediaPlayback = player.configuration.allowsBackgroundPlayback
-                }
                 #endif
                 // Set airplay for media playback
                 configuration.allowsAirPlayForMediaPlayback = player.configuration.allowsAirPlayForMediaPlayback
-                // No media types requiring user action for playback
-                configuration.mediaTypesRequiringUserActionForPlayback = .init()
+                // Allow all media types to play without user action for testing
+                configuration.mediaTypesRequiringUserActionForPlayback = []
                 // Disable text interaction / selection
                 configuration.preferences.isTextInteractionEnabled = false
+                // For testing: Allow background audio playback by configuring media session
+                if player.configuration.allowsBackgroundPlayback {
+                    // Set media session metadata to help with background playback
+                    configuration.userContentController.addUserScript(
+                        WKUserScript(
+                            source: """
+                            // Set up media session for background playback
+                            if ('mediaSession' in navigator) {
+                                navigator.mediaSession.metadata = new MediaMetadata({
+                                    title: 'YouTube Music Player',
+                                    artist: 'Music Player',
+                                    album: 'Background Audio',
+                                });
+                            }
+                            """,
+                            injectionTime: .atDocumentEnd,
+                            forMainFrameOnly: true
+                        )
+                    )
+                }
                 // Set HTML element fullscreen enabled if fullscreen mode is set to web
                 let isElementFullscreenEnabled = player.configuration.fullscreenMode == .web
                 if #available(iOS 15.4, macOS 12.3, visionOS 1.0, *) {
