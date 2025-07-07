@@ -29,16 +29,16 @@ jobs:
         run: |
           set -o pipefail &&\
           xcodebuild docbuild\
-            -scheme YouTubePlayerKit\
+            -scheme YoutubeMusicPlayerKit\
             -destination 'generic/platform=iOS'\
             -derivedDataPath ../DerivedData
       - name: Process Archive
         run: |
           mkdir _site
           $(xcrun --find docc) process-archive \
-            transform-for-static-hosting ../DerivedData/Build/Products/Debug-iphoneos/YouTubePlayerKit.doccarchive \
+            transform-for-static-hosting ../DerivedData/Build/Products/Debug-iphoneos/YoutubeMusicPlayerKit.doccarchive \
             --output-path _site \
-            --hosting-base-path YouTubePlayerKit
+            --hosting-base-path YoutubeMusicPlayerKit
       - name: Create Custom index.html
         run: |
           rm _site/index.html
@@ -46,10 +46,10 @@ jobs:
           <!DOCTYPE html>
           <html>
             <head>
-              <meta http-equiv="refresh" content="0; url='https://sventiigi.github.io/YouTubePlayerKit/documentation/youtubeplayerkit/'" />
+              <meta http-equiv="refresh" content="0; url='https://sventiigi.github.io/YoutubeMusicPlayerKit/documentation/youtubeplayerkit/'" />
             </head>
            <body>
-              <p>Please follow <a href="https://sventiigi.github.io/YouTubePlayerKit/documentation/youtubeplayerkit/">this link</a>.</p>
+              <p>Please follow <a href="https://sventiigi.github.io/YoutubeMusicPlayerKit/documentation/youtubeplayerkit/">this link</a>.</p>
             </body>
           </html>
           EOM

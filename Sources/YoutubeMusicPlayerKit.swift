@@ -12,7 +12,7 @@ import Foundation
 /// Audio background playback is not supported,
 /// Simultaneous playback of multiple YouTube players is not supported,
 /// Controlling playback of 360° videos is not supported.
-/// - SeeAlso: [YoutubeMusicPlayerKitKit on GitHub](https://github.com/SvenTiigi/YoutubeMusicPlayerKitKit?tab=readme-ov-file)
+/// - SeeAlso: [YoutubeMusicPlayerKit on GitHub](https://github.com/SvenTiigi/YoutubeMusicPlayerKit?tab=readme-ov-file)
 @MainActor
 public final class YoutubeMusicPlayerKit: ObservableObject {
     

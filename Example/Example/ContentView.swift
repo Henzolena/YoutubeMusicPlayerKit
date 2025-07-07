@@ -1,5 +1,5 @@
 import SwiftUI
-import YoutubeMusicPlayerKitKit
+import YoutubeMusicPlayerKit
 
 // MARK: - ContentView
 
@@ -67,7 +67,7 @@ extension ContentView: View {
                 self.mediaControlSection
             }
             .headerProminence(.increased)
-            .navigationTitle("YoutubeMusicPlayerKitKit")
+            .navigationTitle("YoutubeMusicPlayerKit")
         }
         .onReceive(
             self.youTubePlayer.statePublisher

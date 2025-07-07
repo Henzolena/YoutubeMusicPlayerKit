@@ -9,7 +9,7 @@ body:
     attributes:
       label: Prerequisites
       options:
-        - label: I have verified this issue is specific to YouTubePlayerKit and not a limitation or bug of the YouTube Player iFrame API.
+        - label: I have verified this issue is specific to YoutubeMusicPlayerKit and not a limitation or bug of the YouTube Player iFrame API.
           required: true
   - type: textarea
     id: bug-description
@@ -34,7 +34,7 @@ body:
     id: expected-behavior
     attributes:
       label: What is the expected behavior?
-      description: Please describe the behavior you expect of YouTubePlayerKit.
-      placeholder: I expect that YouTubePlayerKit would...
+      description: Please describe the behavior you expect of YoutubeMusicPlayerKit.
+      placeholder: I expect that YoutubeMusicPlayerKit would...
     validations:
       required: true

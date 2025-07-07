@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D1B6A632D44D5BF002FE4BF /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3D1B6A622D44D5BF002FE4BF /* YouTubePlayerKit */; };
+		3D1B6A632D44D5BF002FE4BF /* YoutubeMusicPlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3D1B6A622D44D5BF002FE4BF /* YoutubeMusicPlayerKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D1B6A632D44D5BF002FE4BF /* YouTubePlayerKit in Frameworks */,
+				3D1B6A632D44D5BF002FE4BF /* YoutubeMusicPlayerKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				3D1B6A622D44D5BF002FE4BF /* YouTubePlayerKit */,
+				3D1B6A622D44D5BF002FE4BF /* YoutubeMusicPlayerKit */,
 			);
 			productName = Example;
 			productReference = 3D1B6A402D44D3EB002FE4BF /* Example.app */;
@@ -114,7 +114,7 @@
 			mainGroup = 3D1B6A372D44D3EB002FE4BF;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				3D1B6A612D44D5BF002FE4BF /* XCLocalSwiftPackageReference "../../YouTubePlayerKit" */,
+				3D1B6A612D44D5BF002FE4BF /* XCLocalSwiftPackageReference "../../YoutubeMusicPlayerKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3D1B6A412D44D3EB002FE4BF /* Products */;
@@ -279,7 +279,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = YouTubePlayerKit;
+				INFOPLIST_KEY_CFBundleDisplayName = YoutubeMusicPlayerKit;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -318,7 +318,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = YouTubePlayerKit;
+				INFOPLIST_KEY_CFBundleDisplayName = YoutubeMusicPlayerKit;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -368,16 +368,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		3D1B6A612D44D5BF002FE4BF /* XCLocalSwiftPackageReference "../../YouTubePlayerKit" */ = {
+		3D1B6A612D44D5BF002FE4BF /* XCLocalSwiftPackageReference "../../YoutubeMusicPlayerKit" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../YouTubePlayerKit;
+			relativePath = ../../YoutubeMusicPlayerKit;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3D1B6A622D44D5BF002FE4BF /* YouTubePlayerKit */ = {
+		3D1B6A622D44D5BF002FE4BF /* YoutubeMusicPlayerKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = YouTubePlayerKit;
+			productName = YoutubeMusicPlayerKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

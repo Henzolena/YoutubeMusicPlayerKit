@@ -13,19 +13,19 @@ let package = Package(
         .library(
             name: "YoutubeMusicPlayerKit",
             targets: [
-                "YoutubeMusicPlayerKitKit"
+                "YoutubeMusicPlayerKit"
             ]
         )
     ],
     targets: [
         .target(
-            name: "YoutubeMusicPlayerKitKit",
+            name: "YoutubeMusicPlayerKit",
             path: "Sources"
         ),
         .testTarget(
-            name: "YoutubeMusicPlayerKitKitTests",
+            name: "YoutubeMusicPlayerKitTests",
             dependencies: [
-                "YoutubeMusicPlayerKitKit"
+                "YoutubeMusicPlayerKit"
             ],
             path: "Tests"
         )

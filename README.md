@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-    YouTubePlayerKit
+    YoutubeMusicPlayerKit
 </h1>
 
 <p align="center">
@@ -13,17 +13,17 @@
 </p>
 
 <p align="center">
-   <a href="https://swiftpackageindex.com/SvenTiigi/YouTubePlayerKit">
-    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FSvenTiigi%2FYouTubePlayerKit%2Fbadge%3Ftype%3Dswift-versions" alt="Swift Version">
+   <a href="https://swiftpackageindex.com/SvenTiigi/YoutubeMusicPlayerKit">
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FSvenTiigi%2FYoutubeMusicPlayerKit%2Fbadge%3Ftype%3Dswift-versions" alt="Swift Version">
    </a>
-   <a href="https://swiftpackageindex.com/SvenTiigi/YouTubePlayerKit">
-    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FSvenTiigi%2FYouTubePlayerKit%2Fbadge%3Ftype%3Dplatforms" alt="Platforms">
+   <a href="https://swiftpackageindex.com/SvenTiigi/YoutubeMusicPlayerKit">
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FSvenTiigi%2FYoutubeMusicPlayerKit%2Fbadge%3Ftype%3Dplatforms" alt="Platforms">
    </a>
    <br/>
-   <a href="https://github.com/SvenTiigi/YouTubePlayerKit/actions/workflows/build_and_test.yml">
-       <img src="https://github.com/SvenTiigi/YouTubePlayerKit/actions/workflows/build_and_test.yml/badge.svg" alt="Build and Test Status">
+   <a href="https://github.com/SvenTiigi/YoutubeMusicPlayerKit/actions/workflows/build_and_test.yml">
+       <img src="https://github.com/SvenTiigi/YoutubeMusicPlayerKit/actions/workflows/build_and_test.yml/badge.svg" alt="Build and Test Status">
    </a>
-   <a href="https://sventiigi.github.io/YouTubePlayerKit/documentation/youtubeplayerkit/">
+   <a href="https://sventiigi.github.io/YoutubeMusicPlayerKit/documentation/youtubeplayerkit/">
        <img src="https://img.shields.io/badge/Documentation-DocC-blue" alt="Documentation">
    </a>
    <a href="https://twitter.com/SvenTiigi/">
@@ -38,7 +38,7 @@
 
 ```swift
 import SwiftUI
-import YouTubePlayerKit
+import YoutubeMusicPlayerKit
 
 struct ContentView: View {
 
@@ -62,7 +62,7 @@ struct ContentView: View {
 
 ## Example
 
-Check out the example application to see YouTubePlayerKit in action. Simply open the `Example/Example.xcodeproj` and run the "Example" scheme.
+Check out the example application to see YoutubeMusicPlayerKit in action. Simply open the `Example/Example.xcodeproj` and run the "Example" scheme.
 
 ## Installation
 
@@ -70,18 +70,18 @@ To integrate using Apple's [Swift Package Manager](https://swift.org/package-man
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/SvenTiigi/YouTubePlayerKit.git", from: "2.0.0")
+    .package(url: "https://github.com/SvenTiigi/YoutubeMusicPlayerKit.git", from: "2.0.0")
 ]
 ```
 
-Or navigate to your Xcode project then select `Swift Packages`, click the “+” icon and search for `YouTubePlayerKit`.
+Or navigate to your Xcode project then select `Swift Packages`, click the “+” icon and search for `YoutubeMusicPlayerKit`.
 
 > [!NOTE]
-> When integrating YouTubePlayerKit to a macOS or Mac Catalyst target please ensure to enable "Outgoing Connections (Client)" in the "Signing & Capabilities" sections.
+> When integrating YoutubeMusicPlayerKit to a macOS or Mac Catalyst target please ensure to enable "Outgoing Connections (Client)" in the "Signing & Capabilities" sections.
 
 ## App Store Review
 
-When submitting an app to the App Store which includes the `YouTubePlayerKit`, please ensure to add a link to the [YouTube API Terms of Services](https://developers.google.com/youtube/terms/api-services-terms-of-service) in the review notes.
+When submitting an app to the App Store which includes the `YoutubeMusicPlayerKit`, please ensure to add a link to the [YouTube API Terms of Services](https://developers.google.com/youtube/terms/api-services-terms-of-service) in the review notes.
 
 ```
 https://developers.google.com/youtube/terms/api-services-terms-of-service
@@ -96,13 +96,13 @@ https://developers.google.com/youtube/terms/api-services-terms-of-service
 ## Usage
 
 > [!TIP]
-> Please refer to the [YouTubePlayerKit documentation](https://sventiigi.github.io/YouTubePlayerKit/documentation/youtubeplayerkit/) for a complete overview.
+> Please refer to the [YoutubeMusicPlayerKit documentation](https://sventiigi.github.io/YoutubeMusicPlayerKit/documentation/youtubeplayerkit/) for a complete overview.
 
-A [`YouTubePlayer`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/YouTubePlayer.swift) can be easily displayed when using `SwiftUI` by declaring a [`YouTubePlayerView`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/UI/View/YouTubePlayerView.swift).
+A [`YouTubePlayer`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/YouTubePlayer.swift) can be easily displayed when using `SwiftUI` by declaring a [`YouTubePlayerView`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/UI/View/YouTubePlayerView.swift).
 
 ```swift
 import SwiftUI
-import YouTubePlayerKit
+import YoutubeMusicPlayerKit
 
 struct ContentView: View {
 
@@ -140,11 +140,11 @@ struct ContentView: View {
 > [!TIP]
 > You can optionally mark the YouTubePlayer with `@StateObject` or `@ObservedObject` to automatically update your view whenever the source, parameters, or isLoggingEnabled change.
 
-When using `UIKit` or `AppKit` you can make use of the [`YouTubePlayerViewController`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/UI/ViewController/YouTubePlayerViewController.swift) or [`YouTubePlayerHostingView`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/UI/HostingView/YouTubePlayerHostingView.swift).
+When using `UIKit` or `AppKit` you can make use of the [`YouTubePlayerViewController`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/UI/ViewController/YouTubePlayerViewController.swift) or [`YouTubePlayerHostingView`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/UI/HostingView/YouTubePlayerHostingView.swift).
 
 ```swift
 import UIKit
-import YouTubePlayerKit
+import YoutubeMusicPlayerKit
 
 let youTubePlayerViewController = YouTubePlayerViewController(
     player: "https://youtube.com/watch?v=psL_5RIBqnY"
@@ -160,7 +160,7 @@ let youTubePlayerHostingView = YouTubePlayerHostingView(
 
 ## YouTubePlayer
 
-A [`YouTubePlayer`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/YouTubePlayer.swift) is the central object in order to play a certain YouTube video and interact with the underlying YouTube iFrame API.
+A [`YouTubePlayer`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/YouTubePlayer.swift) is the central object in order to play a certain YouTube video and interact with the underlying YouTube iFrame API.
 
 As seen in the previous examples you can initialize a player by using a string literal:
 
@@ -168,7 +168,7 @@ As seen in the previous examples you can initialize a player by using a string l
 let youTubePlayer: YouTubePlayer = "https://youtube.com/watch?v=psL_5RIBqnY"
 ```
 
-To take full control you can initialize a [`YouTubePlayer`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/YouTubePlayer.swift) with a [`YouTubePlayer.Source`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/Models/YouTubePlayer%2BSource.swift), [`YouTubePlayer.Parameters`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/Models/YouTubePlayer%2BParameters.swift) and a [`YouTubePlayer.Configuration`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/Models/YouTubePlayer%2BConfiguration.swift)
+To take full control you can initialize a [`YouTubePlayer`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/YouTubePlayer.swift) with a [`YouTubePlayer.Source`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/Models/YouTubePlayer%2BSource.swift), [`YouTubePlayer.Parameters`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/Models/YouTubePlayer%2BParameters.swift) and a [`YouTubePlayer.Configuration`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/Models/YouTubePlayer%2BConfiguration.swift)
 
 ```swift
 let youTubePlayer = YouTubePlayer(
@@ -200,11 +200,11 @@ youTubePlayer.parameters.showControls = false
 ```
 
 > [!WARNING]
-> Updating the [`YouTubePlayer.Parameters`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/Models/YouTubePlayer%2BParameters.swift) during runtime will cause the player to reload.
+> Updating the [`YouTubePlayer.Parameters`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/Models/YouTubePlayer%2BParameters.swift) during runtime will cause the player to reload.
 
 ### Source
 
-The [`YouTubePlayer.Source`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/Models/YouTubePlayer%2BSource.swift) is an enum which allows you to specify which YouTube source should be loaded/cued.
+The [`YouTubePlayer.Source`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/Models/YouTubePlayer%2BSource.swift) is an enum which allows you to specify which YouTube source should be loaded/cued.
 
 ```swift
 // A single video
@@ -231,7 +231,7 @@ let source: YouTubePlayer.Source? = .init(urlString: "https://youtube.com/watch?
 
 ### API
 
-A [`YouTubePlayer`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/YouTubePlayer.swift) lets you access the underlying [YouTube Player iFrame API](https://developers.google.com/youtube/iframe_api_reference) to play, pause, seek, retrieve video information and much more.
+A [`YouTubePlayer`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/YouTubePlayer.swift) lets you access the underlying [YouTube Player iFrame API](https://developers.google.com/youtube/iframe_api_reference) to play, pause, seek, retrieve video information and much more.
 
 The majority of the APIs are `async` and `throwable` functions.
 
@@ -241,9 +241,9 @@ try await youTubePlayer.pause()
 ```
 
 > [!TIP]
-> Please see the [documentation](https://sventiigi.github.io/YouTubePlayerKit/documentation/youtubeplayerkit/youtubeplayer) for a full overview of the available APIs.
+> Please see the [documentation](https://sventiigi.github.io/YoutubeMusicPlayerKit/documentation/youtubeplayerkit/youtubeplayer) for a full overview of the available APIs.
 
-In case of an error, most functions throw a [`YouTubePlayer.APIError`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/Models/Error/YouTubePlayer%2BAPIError.swift).
+In case of an error, most functions throw a [`YouTubePlayer.APIError`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/Models/Error/YouTubePlayer%2BAPIError.swift).
 This allows you to easily examine the reason for the error, any underlying error, and the executed JavaScript along with its response.
 
 ```swift
@@ -273,7 +273,7 @@ let cancellable = youTubePlayer
 
 ## Video Thumbnail
 
-You can load a YouTube video thumbnail via the [`YouTubeVideoThumbnail`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/VideoThumbnail/YouTubeVideoThumbnail.swift) object.
+You can load a YouTube video thumbnail via the [`YouTubeVideoThumbnail`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/VideoThumbnail/YouTubeVideoThumbnail.swift) object.
 
 ```swift
 // Initialize an instance of YouTubeVideoThumbnail
@@ -304,7 +304,7 @@ try await youTubePlayer.getVideoThumbnailImage(resolution: .maximum)
 
 If you wish to gain more insights into the underlying communication of the YouTube Player iFrame JavaScript API, you can enable the logging of a player via the `isLogginEnabled` parameter.
 
-The [`YouTubePlayer`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/YouTubePlayer.swift) utilizes the [unified logging system (OSLog)](https://developer.apple.com/documentation/os/logging) to log information about the player options, JavaScript events and evaluations.
+The [`YouTubePlayer`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/YouTubePlayer.swift) utilizes the [unified logging system (OSLog)](https://developer.apple.com/documentation/os/logging) to log information about the player options, JavaScript events and evaluations.
 
 ```swift
 // Enable or disable logging during initialization
@@ -326,7 +326,7 @@ let logger: Logger? = youTubePlayer.logger()
 
 ## Advanced
 
-You can observe the incoming stream of [`YouTubePlayer.Event`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/Models/Event/YouTubePlayer%2BEvent.swift) from the underlying YouTube Player iFrame API through the following publisher.
+You can observe the incoming stream of [`YouTubePlayer.Event`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/Models/Event/YouTubePlayer%2BEvent.swift) from the underlying YouTube Player iFrame API through the following publisher.
 
 ```swift
 let cancellable = youTubePlayer
@@ -344,9 +344,9 @@ let cancellable = youTubePlayer
 ```
 
 > [!IMPORTANT]
-> The YouTubePlayerKit supports both official as well as unofficial/undocumented events. Please see the [`YouTubePlayer.Event.Name`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/Models/Event/YouTubePlayer%2BEvent%2BName.swift) enumeration for more details.
+> The YoutubeMusicPlayerKit supports both official as well as unofficial/undocumented events. Please see the [`YouTubePlayer.Event.Name`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/Models/Event/YouTubePlayer%2BEvent%2BName.swift) enumeration for more details.
 
-To run [custom JavaScript](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/Models/JavaScript/YouTubePlayer%2BJavaScript.swift) on the YouTube player JavaScript instance:
+To run [custom JavaScript](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/Models/JavaScript/YouTubePlayer%2BJavaScript.swift) on the YouTube player JavaScript instance:
 
 ```swift
 try await youTubePlayer.evaluate(
@@ -355,7 +355,7 @@ try await youTubePlayer.evaluate(
 ```
 
 > [!NOTE]
-> The custom string interpolation of [`\(.youTubePlayer)`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/Models/JavaScript/YouTubePlayer%2BJavaScript.swift) is a placeholder for the YouTube player JavaScript variable.
+> The custom string interpolation of [`\(.youTubePlayer)`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/Models/JavaScript/YouTubePlayer%2BJavaScript.swift) is a placeholder for the YouTube player JavaScript variable.
 
 Alternatively, you can use the following convenience function to directly invoke a function on the YouTube player JavaScript object:
 
@@ -370,7 +370,7 @@ try await youTubePlayer.evaluate(
 )
 ```
 
-If you wish to further customize the underlying HTML you can configure the [`YouTubePlayer.HTMLBuilder`](https://github.com/SvenTiigi/YouTubePlayerKit/blob/main/Sources/Models/YouTubePlayer%2BHTMLBuilder.swift) when initializing an instance of the player:
+If you wish to further customize the underlying HTML you can configure the [`YouTubePlayer.HTMLBuilder`](https://github.com/SvenTiigi/YoutubeMusicPlayerKit/blob/main/Sources/Models/YouTubePlayer%2BHTMLBuilder.swift) when initializing an instance of the player:
 
 ```swift
 let youTubePlayer = YouTubePlayer(

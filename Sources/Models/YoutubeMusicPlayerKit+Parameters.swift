@@ -7,7 +7,7 @@ public extension YoutubeMusicPlayerKit {
     /// The YouTube player parameters.
     /// - SeeAlso: [YouTube Player Parameters Documentation](https://developers.google.com/youtube/player_parameters)
     /// - Note: The parameters `list`, `listType`, `playlist`, `playsinline`, `enablejsapi` are not directly configurable.
-    /// The YoutubeMusicPlayerKitKit automatically sets these paramters based on the provided ``YoutubeMusicPlayerKit/Source`` and ``YoutubeMusicPlayerKit/Configuration``
+    /// The YoutubeMusicPlayerKit automatically sets these paramters based on the provided ``YoutubeMusicPlayerKit/Source`` and ``YoutubeMusicPlayerKit/Configuration``
     struct Parameters: Hashable, Sendable {
         
         /// Controls whether the video automatically begins playing when the player loads.

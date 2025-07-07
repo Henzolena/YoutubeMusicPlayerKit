@@ -1,6 +1,6 @@
 import Testing
 import Foundation
-@testable import YoutubeMusicPlayerKitKit
+@testable import YoutubeMusicPlayerKit
 
 struct YoutubeMusicPlayerKitJavaScriptTests {
     

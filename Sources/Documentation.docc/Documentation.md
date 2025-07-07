@@ -1,14 +1,14 @@
-# ``YouTubePlayerKit``
+# ``YoutubeMusicPlayerKit``
 
 A Swift Package to easily play YouTube videos.
 
 ## Overview
 
-YouTubePlayerKit is [available on GitHub](https://github.com/SvenTiigi/YouTubePlayerKit).
+YoutubeMusicPlayerKit is [available on GitHub](https://github.com/SvenTiigi/YoutubeMusicPlayerKit).
 
 ```swift
 import SwiftUI
-import YouTubePlayerKit
+import YoutubeMusicPlayerKit
 
 struct ContentView: View {
 

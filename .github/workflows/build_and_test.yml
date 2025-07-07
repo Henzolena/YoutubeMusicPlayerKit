@@ -41,7 +41,7 @@ jobs:
         run: |
           set -o pipefail &&\
           xcodebuild build-for-testing\
-            -scheme YouTubePlayerKit\
+            -scheme YoutubeMusicPlayerKit\
             -sdk iphonesimulator\
             -destination "platform=iOS Simulator,name=${{ matrix.destination }},OS=${{ matrix.os }}"\
           | xcbeautify --renderer github-actions
@@ -49,7 +49,7 @@ jobs:
         run: |
           set -o pipefail &&\
           xcodebuild test-without-building\
-            -scheme YouTubePlayerKit\
+            -scheme YoutubeMusicPlayerKit\
             -sdk iphonesimulator\
             -destination "platform=iOS Simulator,name=${{ matrix.destination }},OS=${{ matrix.os }}"\
           | xcbeautify --renderer github-actions
