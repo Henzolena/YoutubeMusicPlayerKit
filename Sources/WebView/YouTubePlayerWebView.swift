@@ -42,6 +42,8 @@ final class YouTubePlayerWebView: WKWebView {
                 configuration.allowsInlineMediaPlayback = player.configuration.allowsInlineMediaPlayback
                 // Set allows picture in picture media playback
                 configuration.allowsPictureInPictureMediaPlayback = player.configuration.allowsPictureInPictureMediaPlayback
+                // Set allows background media playback
+                configuration.allowsBackgroundMediaPlayback = player.configuration.allowsBackgroundPlayback
                 #endif
                 // Set airplay for media playback
                 configuration.allowsAirPlayForMediaPlayback = player.configuration.allowsAirPlayForMediaPlayback

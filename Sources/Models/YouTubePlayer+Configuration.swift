@@ -41,6 +41,9 @@ public extension YouTubePlayer {
         /// The action to perform when a url gets opened.
         public let openURLAction: OpenURLAction
         
+        /// A Boolean value that indicates whether audio playback is allowed in the background.
+        public let allowsBackgroundPlayback: Bool
+        
         // MARK: Initializer
         
         /// Creates a new instance of ``YouTubePlayer/Configuration``
@@ -63,7 +66,8 @@ public extension YouTubePlayer {
             automaticallyAdjustsContentInsets: Bool = true,
             customUserAgent: String? = nil,
             htmlBuilder: HTMLBuilder = .init(),
-            openURLAction: OpenURLAction = .default
+            openURLAction: OpenURLAction = .default,
+            allowsBackgroundPlayback: Bool = true
         ) {
             self.fullscreenMode = fullscreenMode
             self.allowsInlineMediaPlayback = allowsInlineMediaPlayback
@@ -74,6 +78,7 @@ public extension YouTubePlayer {
             self.customUserAgent = customUserAgent
             self.htmlBuilder = htmlBuilder
             self.openURLAction = openURLAction
+            self.allowsBackgroundPlayback = allowsBackgroundPlayback
         }
         
     }
@@ -116,6 +121,7 @@ extension YouTubePlayer.Configuration: Codable {
         case automaticallyAdjustsContentInsets
         case customUserAgent
         case htmlBuilder
+        case allowsBackgroundPlayback
     }
     
     /// Creates a new instance of ``YouTubePlayer/Configuration``
@@ -132,7 +138,8 @@ extension YouTubePlayer.Configuration: Codable {
             useNonPersistentWebsiteDataStore: container.decode(Bool.self, forKey: .useNonPersistentWebsiteDataStore),
             automaticallyAdjustsContentInsets: container.decode(Bool.self, forKey: .automaticallyAdjustsContentInsets),
             customUserAgent: container.decodeIfPresent(String.self, forKey: .customUserAgent),
-            htmlBuilder: container.decode(YouTubePlayer.HTMLBuilder.self, forKey: .htmlBuilder)
+            htmlBuilder: container.decode(YouTubePlayer.HTMLBuilder.self, forKey: .htmlBuilder),
+            allowsBackgroundPlayback: container.decode(Bool.self, forKey: .allowsBackgroundPlayback)
         )
     }
     
@@ -150,6 +157,7 @@ extension YouTubePlayer.Configuration: Codable {
         try container.encode(self.automaticallyAdjustsContentInsets, forKey: .automaticallyAdjustsContentInsets)
         try container.encode(self.customUserAgent, forKey: .customUserAgent)
         try container.encode(self.htmlBuilder, forKey: .htmlBuilder)
+        try container.encode(self.allowsBackgroundPlayback, forKey: .allowsBackgroundPlayback)
     }
     
 }
