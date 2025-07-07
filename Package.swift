@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "YouTubePlayerKit",
+    name: "YoutubeMusicPlayerKit",
     platforms: [
         .iOS(.v15),
         .macOS(.v12),
@@ -11,21 +11,21 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "YouTubePlayerKit",
+            name: "YoutubeMusicPlayerKit",
             targets: [
-                "YouTubePlayerKit"
+                "YoutubeMusicPlayerKitKit"
             ]
         )
     ],
     targets: [
         .target(
-            name: "YouTubePlayerKit",
+            name: "YoutubeMusicPlayerKitKit",
             path: "Sources"
         ),
         .testTarget(
-            name: "YouTubePlayerKitTests",
+            name: "YoutubeMusicPlayerKitKitTests",
             dependencies: [
-                "YouTubePlayerKit"
+                "YoutubeMusicPlayerKitKit"
             ],
             path: "Tests"
         )

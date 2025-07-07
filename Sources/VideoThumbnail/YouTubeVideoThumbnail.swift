@@ -57,7 +57,7 @@ extension YouTubeVideoThumbnail: ExpressibleByURL {
     /// Creates a new instance of ``YouTubeVideoThumbnail``
     /// - Parameter url: The URL.
     public init?(url: URL) {
-        guard case .video(let videoID) = YouTubePlayer.Source(url: url) else {
+        guard case .video(let videoID) = YoutubeMusicPlayerKit.Source(url: url) else {
             return nil
         }
         self.init(videoID: videoID)

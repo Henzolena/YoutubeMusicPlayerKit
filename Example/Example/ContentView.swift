@@ -1,5 +1,5 @@
 import SwiftUI
-import YouTubePlayerKit
+import YoutubeMusicPlayerKitKit
 
 // MARK: - ContentView
 
@@ -9,7 +9,7 @@ struct ContentView {
     // MARK: Properties
     
     /// The YouTube Player.
-    private let youTubePlayer: YouTubePlayer
+    private let youTubePlayer: YoutubeMusicPlayerKit
     
     /// The selected WWDC keynote.
     @State
@@ -17,23 +17,23 @@ struct ContentView {
     
     /// The state.
     @State
-    private var state: YouTubePlayer.State = .idle
+    private var state: YoutubeMusicPlayerKit.State = .idle
     
     /// The playback state.
     @State
-    private var playbackState: YouTubePlayer.PlaybackState?
+    private var playbackState: YoutubeMusicPlayerKit.PlaybackState?
     
     /// The playback quality.
     @State
-    private var playbackQuality: YouTubePlayer.PlaybackQuality?
+    private var playbackQuality: YoutubeMusicPlayerKit.PlaybackQuality?
     
     /// The playback rate.
     @State
-    private var playbackRate: YouTubePlayer.PlaybackRate?
+    private var playbackRate: YoutubeMusicPlayerKit.PlaybackRate?
     
     /// The playback metadata.
     @State
-    private var playbackMetadata: YouTubePlayer.PlaybackMetadata?
+    private var playbackMetadata: YoutubeMusicPlayerKit.PlaybackMetadata?
     
     // MARK: Initializer
     
@@ -67,7 +67,7 @@ extension ContentView: View {
                 self.mediaControlSection
             }
             .headerProminence(.increased)
-            .navigationTitle("YouTubePlayerKit")
+            .navigationTitle("YoutubeMusicPlayerKitKit")
         }
         .onReceive(
             self.youTubePlayer.statePublisher
@@ -110,7 +110,7 @@ private extension ContentView {
     /// The player section
     var playerSection: some View {
         Section {
-            YouTubePlayerView(self.youTubePlayer) { state in
+            YoutubeMusicPlayerKitView(self.youTubePlayer) { state in
                 switch state {
                 case .idle:
                     ProgressView()
@@ -158,7 +158,7 @@ private extension ContentView {
                 of: self.wwdcKeynote
             ) { _, wwdcKeynote in
                 Task { @MainActor in
-                    guard let source = YouTubePlayer.Source(urlString: wwdcKeynote.youTubeURL) else {
+                    guard let source = YoutubeMusicPlayerKit.Source(urlString: wwdcKeynote.youTubeURL) else {
                         try? await self.youTubePlayer.stop()
                         return
                     }
@@ -317,32 +317,32 @@ private extension ContentView {
     /// The parameters section
     var parametersSection: some View {
         Section {
-            YouTubePlayerBoolParameterControl(
+            YoutubeMusicPlayerKitBoolParameterControl(
                 "Auto Play",
                 parameter: \.autoPlay,
                 youTubePlayer: self.youTubePlayer
             )
-            YouTubePlayerBoolParameterControl(
+            YoutubeMusicPlayerKitBoolParameterControl(
                 "Loop Enabled",
                 parameter: \.loopEnabled,
                 youTubePlayer: self.youTubePlayer
             )
-            YouTubePlayerBoolParameterControl(
+            YoutubeMusicPlayerKitBoolParameterControl(
                 "Show Controls",
                 parameter: \.showControls,
                 youTubePlayer: self.youTubePlayer
             )
-            YouTubePlayerBoolParameterControl(
+            YoutubeMusicPlayerKitBoolParameterControl(
                 "Show Fullscreen Button",
                 parameter: \.showFullscreenButton,
                 youTubePlayer: self.youTubePlayer
             )
-            YouTubePlayerBoolParameterControl(
+            YoutubeMusicPlayerKitBoolParameterControl(
                 "Keyboard Controls Disabled",
                 parameter: \.keyboardControlsDisabled,
                 youTubePlayer: self.youTubePlayer
             )
-            YouTubePlayerBoolParameterControl(
+            YoutubeMusicPlayerKitBoolParameterControl(
                 "Show Captions",
                 parameter: \.showCaptions,
                 youTubePlayer: self.youTubePlayer
@@ -356,7 +356,7 @@ private extension ContentView {
     
     
     /// A YouTube player bool parameter control.
-    struct YouTubePlayerBoolParameterControl: View {
+    struct YoutubeMusicPlayerKitBoolParameterControl: View {
         
         // MARK: Properties
         
@@ -364,23 +364,23 @@ private extension ContentView {
         private let titleKey: LocalizedStringKey
         
         /// The key path.
-        private let keyPath: WritableKeyPath<YouTubePlayer.Parameters, Bool?>
+        private let keyPath: WritableKeyPath<YoutubeMusicPlayerKit.Parameters, Bool?>
         
         /// The YouTube player.
         @ObservedObject
-        private var youTubePlayer: YouTubePlayer
+        private var youTubePlayer: YoutubeMusicPlayerKit
         
         // MARK: Initializer
         
-        /// Creates a new instance of ``YouTubePlayerBoolParameterControl``
+        /// Creates a new instance of ``YoutubeMusicPlayerKitBoolParameterControl``
         /// - Parameters:
         ///   - titleKey: The title.
         ///   - keyPath: The key path.
         ///   - youTubePlayer: The YouTube player.
         init(
             _ titleKey: LocalizedStringKey,
-            parameter keyPath: WritableKeyPath<YouTubePlayer.Parameters, Bool?>,
-            youTubePlayer: YouTubePlayer
+            parameter keyPath: WritableKeyPath<YoutubeMusicPlayerKit.Parameters, Bool?>,
+            youTubePlayer: YoutubeMusicPlayerKit
         ) {
             self.titleKey = titleKey
             self.keyPath = keyPath
